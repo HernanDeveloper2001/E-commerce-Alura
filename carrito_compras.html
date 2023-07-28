@@ -37,8 +37,7 @@
                 <nav class="usuario__navegacion">
                     <ul class="contenedor-login">
                         <li><a class="login" href="index.html">Inicio</a></li>
-                        <li><a class="login" href="login.html">Registrate</a></li>
-                        
+                        <li><a class="login" href="login.html">Registrate</a></li>     
                     </ul>
                 </nav>
             </article>
@@ -49,27 +48,6 @@
         
         <section id="ventana_carrito">
             <h1 class="carrito-titulo">Tú carrito compras</h1>
-            <!-- compras -->
-            <template id="template">
-                <article class="carrito-articulos">
-                    <div class="carrito-descripcion">
-                        <p class="carrito-nombre nombre_articulo">Nombre</p>
-                        <p class="carrito-precio precio_articulo">Precio</p>
-                    </div>
-                    <div class="carrito-botones">
-                        <button class="carrito-boton-comprar">Comprar</button>
-                        <button class="carrito-boton-quitar">Quitar</button>
-                    </div>
-                </article>
-            </template>
-            <!-- Pie de venta -->
-            <template id="footer">
-                <article class="carrito-articulos">
-                    <div class="valor-total">
-                        <p>Valor total: <span class="total">$00.00</span></p>
-                    </div>
-                </article>
-            </template>
         </section>
 
         <section id="ventana_carrito-compras">
@@ -85,20 +63,7 @@
             <span class="pie_de_pagina-fecha">Realizado: 2023</span>
         </section>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const nombreCarrito = document.querySelector(".nombre_articulo");
-            const precioCarrito = document.querySelector(".precio_articulo");
-
-            const nombreArticulo = sessionStorage.getItem("nombre_articulo");
-            const precioArticulo = sessionStorage.getItem("precio_articulo");
-
-            nombreCarrito.textContent = nombreArticulo;
-            precioCarrito.textContent = precioArticulo;
-        });
-    </script>
-
+    
     <script type="module" src="js/carrito/registrar.productos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>

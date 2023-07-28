@@ -1,24 +1,14 @@
 {
   "productos": [
     {
-      "nombre_producto": "tarro de galletas",
-      "precio_producto": "$ 100,00",
-      "id": "4db74c05-c8c3-4ae6-b69d-5529756de94e"
-    },
-    {
       "nombre_producto": "yoda muñeco",
       "precio_producto": "$ 30,00",
-      "id": "eb8cc5ef-0739-4ed6-88c5-d9ddebce2f7b"
+      "id": "0ca7070f-4020-409b-be99-6458ae0c8065"
     },
     {
-      "nombre_producto": "personaje goku",
-      "precio_producto": "$ 80,00",
-      "id": "fcd154dd-fa2f-4fe5-b307-f154e0e7798d"
-    },
-    {
-      "nombre_producto": "yoda muñeco",
-      "precio_producto": "$ 30,00",
-      "id": "b6b9db71-17bb-4972-bd5e-7eab2a34b951"
+      "nombre_producto": "producto XYZ",
+      "precio_producto": "$ 500,00",
+      "id": "2d12ded3-2aca-44ce-9e57-a65984127dcd"
     }
   ]
 }

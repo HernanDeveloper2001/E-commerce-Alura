@@ -1,32 +1,47 @@
-const productoNuevo = (nombre_producto, precio_producto, id_producto) => {
-    const templateProducto = document.getElementById("template");
-    const fragment = document.createDocumentFragment();
-    
-    const clonar = templateProducto.content.cloneNode(true);
-    clonar.querySelector(".nombre_articulo").textContent = nombre_producto;
-    clonar.querySelector(".precio_articulo").textContent = precio_producto;
-    fragment.appendChild(clonar);
-    valorTotalProducto()
-    return fragment;
+const productoNuevo = (nombre_producto, precio_producto, id) => {
+    const linea = document.createElement("section");
+    const contenido = `
+                <article class="carrito-articulos">
+                <div class="carrito-descripcion">
+                    <p class="carrito-nombre nombre_articulo">${nombre_producto}</p>
+                    <p class="carrito-precio precio_articulo">${precio_producto}</p>
+                </div>
+                <div class="carrito-cantidad">
+                    <p>Cantidad</p>
+                    <span class="cantidad">1</span>
+                </div>
+                <div class="carrito-botones">
+                    <button class="carrito-boton-comprar">Comprar</button>
+                    <button class="carrito-boton-quitar" id="${id}">Quitar</button>
+                </div>
+            </article>`
+    linea.innerHTML = contenido
+
+    const botonQuitar = linea.querySelector(".carrito-boton-quitar");
+        botonQuitar.addEventListener("click", () => {
+            const id = botonQuitar.id
+            quitarProducto(id).then((respuesta) => {
+                console.log(respuesta)
+            }).catch(error => alert("Ocurrio un error"+ error))
+        })
+
+    return linea
 }
+
+const quitarProducto =(id) =>{
+    return fetch(`http://localhost:2000/productos/${id}`, {
+        method: "DELETE",
+    }).catch(error => console.log(error))
+}
+
 
 const carritoProducto = document.getElementById("ventana_carrito");
-
-const valorTotalProducto = () => {
-    const footerCarritoTotal = document.getElementById("footer");
-    const footerfragment = document.createDocumentFragment()
-    const clonar = footerCarritoTotal.content.cloneNode(true);
-    clonar.querySelector(".total").textContent = 0;
-    footerfragment.appendChild(clonar);
-    return footerfragment;
-}
-
 
 const listaDeArticulos = () => {
     fetch("http://localhost:2000/productos")
         .then(respuesta => respuesta.json())
-        .then(data => data.forEach(({nombre_producto, precio_producto, id_producto}) =>  {
-            const nuevoProductoAgregado = productoNuevo(nombre_producto, precio_producto, id_producto)
+        .then(data => data.forEach(({nombre_producto, precio_producto, id}) =>  {
+            const nuevoProductoAgregado = productoNuevo(nombre_producto, precio_producto, id)
             carritoProducto.appendChild(nuevoProductoAgregado);
         }))
         .catch(error => console.log("Opss" + error));
@@ -44,7 +59,6 @@ const AgregarProductoCarrito = (nombre_producto, precio_producto) => {
     })
         
 }
-
 
 export const productos = {
     AgregarProductoCarrito,
