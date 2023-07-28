@@ -1,0 +1,39 @@
+.pie_de_pagina {
+    height: auto;
+    display: flex;
+    align-items: center;
+    background: #99a3a3;
+    justify-content: center;
+}
+
+.seccion__pie_de_pagina {
+    margin: 2.5rem auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    flex-wrap: wrap;
+}
+
+.pie_de_pagina-titulo {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.pie_de_pagina-subtitulo {
+    font-size: 1.5rem;
+}
+
+.pie_de_pagina-fecha {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 767px) {
+    .seccion__pie_de_pagina {
+        width: 90%;
+    }
+
+}

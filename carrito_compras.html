@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/carrito/carrito.css">
+    <link rel="stylesheet" href="style/header/header.css">
+    <link rel="stylesheet" href="style/footer/footer.css">
+    <title>E-commerce</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontAwesome/fontawesome-free-6.4.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera" id="cabecera">
+        <section class="cabecera__seccion">
+            <article class="seccion__contenido">
+                <div class="seccion__contenedor-imagen">
+                    <a href="index.html">
+                        <img class="seccion__imagen" src="img/Logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="seccion__buscador">
+                    <input type="search" name="buscador" id="buscador" placeholder="¿Que deseas buscar?">
+                    <div class="contenedor__icono">
+                        <i class="fa-solid fa-magnifying-glass icon"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="seccion__usuario">
+                <nav class="usuario__navegacion">
+                    <ul class="contenedor-login">
+                        <li><a class="login" href="index.html">Inicio</a></li>
+                        <li><a class="login" href="login.html">Registrate</a></li>
+                        
+                    </ul>
+                </nav>
+            </article>
+        </section>
+    </header>
+
+    <main class="contenido-carrito">
+        
+        <section id="ventana_carrito">
+            <h1 class="carrito-titulo">Tú carrito compras</h1>
+            <!-- compras -->
+            <template id="template">
+                <article class="carrito-articulos">
+                    <div class="carrito-descripcion">
+                        <p class="carrito-nombre nombre_articulo">Nombre</p>
+                        <p class="carrito-precio precio_articulo">Precio</p>
+                    </div>
+                    <div class="carrito-botones">
+                        <button class="carrito-boton-comprar">Comprar</button>
+                        <button class="carrito-boton-quitar">Quitar</button>
+                    </div>
+                </article>
+            </template>
+            <!-- Pie de venta -->
+            <template id="footer">
+                <article class="carrito-articulos">
+                    <div class="valor-total">
+                        <p>Valor total: <span class="total">$00.00</span></p>
+                    </div>
+                </article>
+            </template>
+        </section>
+
+        <section id="ventana_carrito-compras">
+            <h1 class="carrito-titulo">Tús compras</h1>
+        </section>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="pie_de_pagina">
+        <section class="seccion__pie_de_pagina">
+            <h4 class="pie_de_pagina-titulo">hernan dario</h4>
+            <p class="pie_de_pagina-subtitulo">Desarrollado para el aprendizaje de desarrollo web y diseño para el grupo alura.</p>
+            <span class="pie_de_pagina-fecha">Realizado: 2023</span>
+        </section>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const nombreCarrito = document.querySelector(".nombre_articulo");
+            const precioCarrito = document.querySelector(".precio_articulo");
+
+            const nombreArticulo = sessionStorage.getItem("nombre_articulo");
+            const precioArticulo = sessionStorage.getItem("precio_articulo");
+
+            nombreCarrito.textContent = nombreArticulo;
+            precioCarrito.textContent = precioArticulo;
+        });
+    </script>
+
+    <script type="module" src="js/carrito/registrar.productos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

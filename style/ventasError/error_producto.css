@@ -1,0 +1,51 @@
+.seccion-error {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.seccion__error-producto {
+    width: 80%;
+    margin: 2.5rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono_advertencia {
+    width: 300px;
+    height: 300px;
+    background-image: url("../../img/iconos/icono_advertencia.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.seccion__error-advertencia {
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.seccion__error-parrafo {
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+#error_productos_boton {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    background-color: #2A7AE4;
+    border: 1px solid #2A7AE4;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+#error_productos_boton:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}

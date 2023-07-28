@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/header/header.css">
+    <link rel="stylesheet" href="style/principal/descripcion.css">
+    <link rel="stylesheet" href="style/principal/seccion_ventas.css">
+    <link rel="stylesheet" href="style/ventasError/error_producto.css">
+    <link rel="stylesheet" href="style/principal/formulario.css">
+    <link rel="stylesheet" href="style/footer/footer.css">
+
+    <title>E-Commerce</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontAwesome/fontawesome-free-6.4.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera" id="cabecera">
+        <section class="cabecera__seccion">
+            <article class="seccion__contenido">
+                <div class="seccion__contenedor-imagen">
+                    <a href="index.html">
+                        <img class="seccion__imagen" src="img/Logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="seccion__buscador">
+                    <input type="search" name="buscador" id="buscador" placeholder="¿Que deseas buscar?">
+                    <div class="contenedor__icono">
+                        <i class="fa-solid fa-magnifying-glass icon"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="seccion__usuario">
+                <nav class="usuario__navegacion">
+                    <ul class="contenedor-login">
+                        <li class="contenedor-login"><a class="login" href="registrar.html">Registrate</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+    </header>
+
+    <!-- seccion de ventas y contacto -->
+    <main class="contenido">
+        
+        <!-- seccion informacion de ventas -->
+        <section class="seccion-1">
+            <article class="seccion1__promocion-contenedor">
+                <div class="seccion1__contenido">
+                    <h1 class="seccion1__titulo">Febrero Promocional</h1>
+                    <p class="seccion1__parrafo">Productos seleccionados con 33% de descuento</p>
+                </div>
+                <a class="seccion__boton" href="#seccion-ventas">Ver Consumo</a>
+            </article>
+        </section>
+
+        <!-- seccion de ventas star wars -->
+        <section class="seccion-2" id="seccion-ventas">
+            <article class="seccion2__contenedor">
+                <div class="seccion2__descripcion-ventas">
+                    <h2>Star Wars</h2>
+                    <a class="ver-todo" href="productos.html">Ver todo<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <article class="seccion2__ventas">
+
+                    <!-- muñeco -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/start-wars/yoda.jpg">
+                            <img src="img/ventas/start-wars/yoda.jpg" alt="yoda">
+                        </div>
+
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">yoda muñeco</h4>
+                            <h5 class="precio-venta">$ 30,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- cartuchera -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/start-wars/cartuchera.jpg">
+                            <img src="img/ventas/start-wars/cartuchera.jpg" alt="cartuchera">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">cartuchera</h4>
+                            <h5 class="precio-venta">$ 20,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- tarro galletas -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/start-wars/galletas.jpg">
+                            <img src="img/ventas/start-wars/galletas.jpg" alt="tarro de galletas">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">tarro de galletas</h4>
+                            <h5 class="precio-venta">$ 100,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- maletin -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/start-wars/maletin.jpeg">
+                            <img src="img/ventas/start-wars/maletin.jpeg" alt="maletin">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">maletin</h4>
+                            <h5 class="precio-venta">$ 2000,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- sanducheras -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/start-wars/sandwitch.jpg">
+                            <img src="img/ventas/start-wars/sandwitch.jpg" alt="sanduchera">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">sanducheras</h4>
+                            <h5 class="precio-venta">$ 60,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- personajes -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/start-wars/personajes.jpg">
+                            <img src="img/ventas/start-wars/personajes.jpg" alt="personajes star wars">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">personajes</h4>
+                            <h5 class="precio-venta">$ 1000,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+                </article>
+            </article>
+        </section>
+        
+        <!-- seccion de ventas dragon ball -->
+        <section class="seccion-2">
+            <article class="seccion2__contenedor">
+                <div class="seccion2__descripcion-ventas">
+                    <h2>Dragon ball</h2>
+                    <a class="ver-todo" href="productos.html">Ver todo<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <article class="seccion2__ventas">
+
+                    <!-- saco 1 -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/dragon-ball/saco1.jpg">
+                            <img src="img/ventas/dragon-ball/saco1.jpg" alt="saco 1">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">saco dragon ball</h4>
+                            <h5 class="precio-venta">$ 500,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- saco 2 -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/dragon-ball/saco2.jpg">
+                            <img src="img/ventas/dragon-ball/saco2.jpg" alt="saco 2">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">saco de dragon ball</h4>
+                            <h5 class="precio-venta">$ 500,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- saco 3 -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/dragon-ball/saco3.jpg">
+                            <img src="img/ventas/dragon-ball/saco3.jpg" alt="saco 3">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">producto XYZ</h4>
+                            <h5 class="precio-venta">$ 500,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- tasa -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/dragon-ball/tasa.jpg">
+                            <img src="img/ventas/dragon-ball/tasa.jpg" alt="tasa">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">tasa</h4>
+                            <h5 class="precio-venta">$ 10,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- personaje goku -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/dragon-ball/personaje goku.jpg">
+                            <img src="img/ventas/dragon-ball/personaje goku.jpg" alt="personaje doku">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">personaje goku</h4>
+                            <h5 class="precio-venta">$ 80,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- personajes -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/dragon-ball/control.jpg">
+                            <img src="img/ventas/dragon-ball/control.jpg" alt="control ps4">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">control ps4</h4>
+                            <h5 class="precio-venta">$ 6000,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                </article>
+            </article>
+        </section>
+
+        <!-- seccion de league of legends -->
+        <section class="seccion-2">
+            <article class="seccion2__contenedor">
+                <div class="seccion2__descripcion-ventas">
+                    <h2>League of legends</h2>
+                    <a class="ver-todo" href="productos.html">Ver todo<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <article class="seccion2__ventas">
+
+                    <!-- k-pop vi -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/league_of_legends/k-pop_vi.jpg">
+                            <img src="img/ventas/league_of_legends/k-pop_vi.jpg" alt="k-pop-vi">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">k-pop vi</h4>
+                            <h5 class="precio-venta">$ 35,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- anillos -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/league_of_legends/anillos.jpg">
+                            <img src="img/ventas/league_of_legends/anillos.jpg" alt="anillos">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">anillos</h4>
+                            <h5 class="precio-venta">$ 100,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- caja misteriosa -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/league_of_legends/caja-misteriosa.jpg">
+                            <img src="img/ventas/league_of_legends/caja-misteriosa.jpg" alt="caja misteriosa">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">caja misteriosa</h4>
+                            <h5 class="precio-venta">$ 3000,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- super caja misteriosa -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/league_of_legends/super-caja-misteriosa.jpg">
+                            <img src="img/ventas/league_of_legends/super-caja-misteriosa.jpg" alt="super caja misteriosa">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">Super Caja misteriosa</h4>
+                            <h5 class="precio-venta">$ 10000,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- figurita jhin -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/league_of_legends/jhin.jpg">
+                            <img src="img/ventas/league_of_legends/jhin.jpg" alt="personaje jhin">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">figura jhin</h4>
+                            <h5 class="precio-venta">$ 150,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+
+                    <!-- cuaderno -->
+                    <div class="ventas">
+                        <div class="ventas__imagen" data-imagen="img/ventas/league_of_legends/cuaderno.jpg">
+                            <img src="img/ventas/league_of_legends/cuaderno.jpg" alt="cuaderno">
+                        </div>
+                        <div class="venta__detalles">
+                            <h4 class="venta__detalles-titulo">cuaderno</h4>
+                            <h5 class="precio-venta">$ 45,00</h5>
+                            <a class="ver_producto">Ver producto</a>
+                        </div>
+                    </div>
+                    
+                </article>
+            </article>
+        </section>
+
+        <!-- Error de articulo -->
+        <section class="seccion-error">
+            <template id="error-contenido">
+                <article class="seccion__error-producto">
+                    <div class="icono_advertencia" data-imagen="img/iconos/icono_advertencia.svg">
+                    </div>
+                    <p class="seccion__error-advertencia">titulo</p>
+                    <p class="seccion__error-parrafo">parrafo</p>
+                    <button id="error_productos_boton">Productos</button>
+                </article>
+            </template>
+        </section>
+    </main>  
+
+    <!-- formulario -->
+    <section class="seccion-3">
+        <article class="seccion3__contenedor">
+                <div class="seccion3__contenedor-imagen">
+                    <a href="#cabecera">
+                        <img class="seccion3__imagen" src="img/Logo.svg" alt="logo">
+                    </a>
+                </div>
+            <article class="seccion3__contacto">
+                <h3 class="seccion3__contacto-titulo">Comunicate con nosotros</h3>
+                <form class="formulario" action="">
+                    <div class="formulario__contenedor">
+                        <input id="nombre-input" class="input" type="text" name="nombre" placeholder=" " required minlength="3" maxlength="40">
+                        <label class="input-texto" for="nombre">Nombre</label>
+                    </div>
+                    <div class="formulario__mensaje">
+                        <textarea class="input-mensaje" name="mensaje" cols="30" rows="10" placeholder=" " required maxlength="100"></textarea>
+                        <label for="mensaje" class="mensaje">Escribe aquí tu mensaje</label>
+                    </div>
+                    <button type="submit" class="boton">Enviar mensaje</button>
+                </form>
+            </article>
+        </article>
+
+    </section>
+
+    <!-- pie de pagina -->
+    <footer class="pie_de_pagina">
+        <section class="seccion__pie_de_pagina">
+            <h4 class="pie_de_pagina-titulo">hernan dario</h4>
+            <p class="pie_de_pagina-subtitulo">Desarrollado para el aprendizaje de desarrollo web y diseño para el grupo alura.</p>
+            <span class="pie_de_pagina-fecha">Realizado: 2023</span>
+        </section>
+    </footer>
+
+    <script type="module" src="js/registrar/registrar.js"></script>
+    <script src="js/index/buscador.js"></script>
+    <script src="js/index/contacto.js"></script>
+    <script src="js/articulo/articulo.js"></script>
+</body>
+</html>

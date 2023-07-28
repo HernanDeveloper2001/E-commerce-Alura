@@ -1,0 +1,99 @@
+.contenido {
+    background: #ECF0F1;
+}
+
+.seccion__login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.seccion__login-contenedor {
+    width: 80%;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.seccion__login-titulo {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.seccion__login-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+
+.formulario-input {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-indent: 20px;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    width: 100%;
+}
+
+.formulario-input:focus {
+    border: 1px solid #2A7AE4;
+}
+
+.formulario-boton {
+    background-color: #2A7AE4;
+    padding: 1rem;
+    border: 1px solid #2A7AE4;
+    border-radius: 5px;
+    width: 30%;
+    margin: auto;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.formulario-boton:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+    
+}
+
+#error {
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    color: #ff0000;
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .seccion__login-contenedor {
+        width: 90%;
+    }
+
+    .seccion__login-formulario {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .seccion__login-contenedor {
+        width: 90%;
+    }
+
+    .seccion__login-formulario {
+        width: 100%;
+    }
+
+}

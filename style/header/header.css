@@ -1,0 +1,233 @@
+.cabecera {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E5E7E9;
+}
+
+.cabecera__seccion {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 80%;
+    margin: auto;
+}
+
+.seccion__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 60%;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.seccion__imagen {
+    width: 250px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.seccion__buscador {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.contenedor__icono {
+    position: absolute;
+    right: 10px;
+}
+
+#buscador {
+    border: none;
+    background-color:#f5f5f5;
+    border-radius: 20px;
+    width: 100%;
+    padding: 1rem 0;
+    text-indent: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    outline: none;
+}
+
+#buscador:focus {
+    border: 1px solid #2A7AE4;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+input[type="search"]::-ms-clear {
+    display: none;
+}
+
+/* Navegacion */
+
+.seccion__usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+
+.contenedor-login {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.login {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2A7AE4;
+    border-radius: 5px;
+    border: 1px solid #2A7AE4;
+}
+
+.login:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+
+.contenedor_usuario {
+    color: #ffffff;
+    position: relative;
+}
+
+.usuario {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: #2A7AE4;
+    border: 1px solid #2A7AE4;
+    border-radius: 5px 5px 0 0;
+}
+
+.usuario:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+
+.usuario__registrado-seccion {
+    position: absolute;
+    margin: 1rem auto;
+    background-color: #2A7AE4;
+}
+
+.usuario-link {
+    display: block;
+    padding: 0.8rem ;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+}
+
+.usuario-link:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+
+.inicio {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2A7AE4;
+    border-radius: 5px;
+    border: 1px solid #2A7AE4;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+@media screen and (max-width:767px) {
+    .cabecera {
+        position: none;
+    }
+    .cabecera__seccion {
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion__contenido {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .seccion__buscador {
+        width: 100%;
+        position: relative;
+        align-items: center;
+    }
+
+    #buscador {
+        width: 100%;
+    }
+
+    .contenedor__icono {
+        position: absolute;
+        right: 10px;
+    }
+
+    .seccion__usuario {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .seccion__usuario {
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .cabecera__seccion {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion__contenido {
+        width: 80%;
+    }
+
+    .seccion__usuario {
+        padding: 1rem;
+        margin: 1rem;
+        width: 90%;
+    }
+
+    .seccion__buscador {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width:1025px) {
+    .cabecera {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+}

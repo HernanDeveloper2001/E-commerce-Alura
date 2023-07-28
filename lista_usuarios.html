@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/header/header.css">
+    <link rel="stylesheet" href="style/footer/footer.css">
+    <link rel="stylesheet" href="style/registrar/lista_usuarios.css">
+    <title>E-Commerce</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontAwesome/fontawesome-free-6.4.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera" id="cabecera">
+        <section class="cabecera__seccion">
+            <article class="seccion__contenido">
+                <div class="seccion__contenedor-imagen">
+                    <a href="index.html">
+                        <img class="seccion__imagen" src="img/Logo.svg" alt="logo">
+                    </a>
+                </div>
+            </article>
+
+            <article class="seccion__usuario">
+                <nav class="usuario__navegacion" id="menu-usuario">
+
+                    <ul class="contenedor-login">
+                        <li><a class="inicio" href="index.html">Inicio</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+    </header>
+
+    <!-- Lista de usuarios -->
+    <main class="contenido">
+        <section id="seccion_usuarios" class="sesion__registro-usuarios">
+            <h1 class="titulo-usuarios">Lista usuarios</h1>
+        </section>
+
+        <template id="template">
+            <div class="contenedor__lista-usuarios">
+                <div class="lista-descripcion">
+                    <p>Nombre</p>
+                    <span id="nombre_usuario">Hernan Dario</span>
+                </div>
+                <div class="lista-descripcion">
+                    <p>Correo</p>
+                    <span id="correo_usuario">hernan@hernan.com</span>
+                </div> 
+            </div>
+        </template>
+
+    </main>
+    
+    <!-- pie de pagina -->
+    <footer class="pie_de_pagina">
+        <section class="seccion__pie_de_pagina">
+            <h4 class="pie_de_pagina-titulo">hernan dario</h4>
+            <p class="pie_de_pagina-subtitulo">Desarrollado para el aprendizaje de desarrollo web y diseño para el grupo alura.</p>
+            <span class="pie_de_pagina-fecha">Realizado: 2023</span>
+        </section>
+    </footer>
+
+    <script type="module" src="js/registrar/registro.usuarios.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

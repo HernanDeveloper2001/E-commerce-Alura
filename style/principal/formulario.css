@@ -1,0 +1,188 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.seccion-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EAF2FD;
+}
+
+.seccion3__contenedor {
+    width: 80%;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+}
+
+.seccion3__contenedor-imagen {
+    width: 30%;
+    height: auto;
+}
+
+.seccion3__imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.seccion3__contacto {
+    margin: auto ;
+}
+
+.seccion3__contacto-titulo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.formulario {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.formulario__contenedor {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input {
+    padding: 1rem 0;
+    text-indent: 20px;
+    border: 1px solid #cccccc;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 80%;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.input:focus {
+    border: 1px solid #4585f4;
+}
+
+.input-texto {
+    font-size: .8rem;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 1000px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.input:focus + .input-texto,
+.input:not(:placeholder-shown) + .input-texto {
+    top:0;
+    left: 20px;
+    color: #000;
+}
+
+.input:focus + .input-texto {
+    color: #4585f4;
+}
+
+/* textarea */
+.formulario__mensaje {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input-mensaje {
+    text-indent: 20px;
+    padding-top: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    height: auto;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    resize: none;
+    width: 90%;
+    
+}
+
+.input-mensaje:focus {
+    border: 1px solid #4585f4;
+}
+
+.mensaje {
+    font-size: .8rem;
+    position: absolute;
+    left: 20px;
+    top: 10%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 1000px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.input-mensaje:focus + .mensaje,
+.input-mensaje:not(:placeholder-shown) + .mensaje {
+    top:0;
+    left: 20px;
+    color: #000;
+}
+
+.input-mensaje:focus + .mensaje {
+    color: #4585f4;
+}
+
+.boton {
+    padding:1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2A7AE4;
+    color: #ffffff;
+}
+
+.boton:hover {
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    background-color: #60a5ff;
+    transition: 0.3s ease-in;
+}  
+
+@media screen and (max-width: 767px) {
+    .seccion3__contenedor {
+        width: 90%;
+    }
+
+    .seccion3__contenedor-imagen {
+        margin: auto;
+        width: 100%;
+    }
+
+    .seccion3__contacto-titulo {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .seccion3__contenedor {
+        width: 90%;
+    }
+
+    .seccion3__contenedor-imagen {
+        margin: auto;
+        width: 100%;
+    }
+
+    .seccion3__contacto-titulo {
+        text-align: center;
+    }
+}
