@@ -1,14 +1,9 @@
 {
   "productos": [
     {
-      "nombre_producto": "yoda muñeco",
-      "precio_producto": "$ 30,00",
-      "id": "0ca7070f-4020-409b-be99-6458ae0c8065"
-    },
-    {
-      "nombre_producto": "producto XYZ",
-      "precio_producto": "$ 500,00",
-      "id": "2d12ded3-2aca-44ce-9e57-a65984127dcd"
+      "nombre_producto": "cartuchera",
+      "precio_producto": "$ 20,00",
+      "id": "a918e00b-caa5-453c-b4b7-25bbad2d985a"
     }
   ]
 }

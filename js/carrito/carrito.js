@@ -9,21 +9,24 @@ function init() {
         botonCarrito.addEventListener("click", (event) => {
             event.preventDefault();
             const contenedorArticulo = event.target.closest(".articulo-contenido-descripcion");
+
+            const contenedorImagen = document.querySelector(".articulo-imagen");
+            const imagen = contenedorImagen.querySelector(".imagen_articulo").src;
+            
             const nombreArticulo = contenedorArticulo.querySelector(".articulo_nombre").textContent;
             const precioArticulo = contenedorArticulo.querySelector(".articulo_precio").textContent;
 
-            
+            sessionStorage.setItem("imagen_articulo", imagen)
             sessionStorage.setItem("nombre_articulo", nombreArticulo);
             sessionStorage.setItem("precio_articulo", precioArticulo);
 
-            productos.AgregarProductoCarrito(nombreArticulo,precioArticulo)
+            productos.AgregarProductoCarrito(nombreArticulo,precioArticulo,imagen)
                 .then(()=> {
                     window.location.href = "carrito_compras.html";
                 }).catch(error => console.log("Opss" + error))
         });
     }
 
-    
 }
 
 

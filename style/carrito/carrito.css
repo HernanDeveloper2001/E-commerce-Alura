@@ -1,14 +1,14 @@
 .contenido-carrito {
     background: #ECF0F1;
     display: flex;
-    height: 70vh;
+    height: 100vh;
     flex-direction: column;
 }
 
 #ventana_carrito {
     margin: 1rem auto;
     width: 80%;
-    max-height: 500px;
+    height: 500px;
     overflow: auto;
     border-radius: 5px;
     display: flex;
