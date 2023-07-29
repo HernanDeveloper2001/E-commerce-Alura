@@ -1,4 +1,4 @@
-const productoNuevo = (nombre_producto, precio_producto, id) => {
+const productoNuevo = (nombre_producto, precio_producto, id, cantidad) => {
     //seccion de productos agregados al carrito
     const linea = document.createElement("section");
     const contenido = `
@@ -9,14 +9,13 @@ const productoNuevo = (nombre_producto, precio_producto, id) => {
                     </div>
                     <div class="carrito-cantidad">
                         <p>Cantidad</p>
-                        <span class="cantidad">1</span>
+                        <span class="cantidad">${cantidad}</span>
                     </div>
                     <div class="carrito-botones">
                         <button class="carrito-boton-comprar">Comprar</button>
                         <button class="carrito-boton-quitar" id="${id}">Quitar</button>
                     </div>
                 </article>`
-
 
     linea.innerHTML = contenido
 
@@ -30,12 +29,11 @@ const productoNuevo = (nombre_producto, precio_producto, id) => {
 
     //boton comprar producto del carrito 
     const botonComprar = linea.querySelector(".carrito-boton-comprar");
-
     botonComprar.addEventListener("click", () => {
         const nombre_producto = linea.querySelector(".nombre_articulo").textContent;
         const imagen_producto = sessionStorage.getItem("imagen_articulo");
         productoComprado(nombre_producto, imagen_producto)
-        // const articulo = document.querySelector(".carrito-articulos")
+        sessionStorage.removeItem(id)
 
     })
 
@@ -43,9 +41,14 @@ const productoNuevo = (nombre_producto, precio_producto, id) => {
 }
 
 
+
 const productoComprado = (nombre_producto, imagen_producto) => {
-    const lineaProductoComprado = document.createElement("article");
-    lineaProductoComprado.classList.add("carrito-articulos-compras");
+    const carritoCompras = document.getElementById("ventana_carrito-compras");
+    const carritoContenedor = carritoCompras.querySelector(".carrito-articulos-compras");
+
+    const lineaProductoComprado = document.createElement("div");
+    lineaProductoComprado.classList.add("carrito-articulos-contenedor");
+
     const contenido = `
         <div class="imagen-producto-comprado">
             <img class="imagen_articulo" src="${imagen_producto}">
@@ -53,17 +56,15 @@ const productoComprado = (nombre_producto, imagen_producto) => {
         <div class="carrito-descripcion-compras">
             <p class="nombre_articulo">${nombre_producto}</p>
             <i class="icono fa-solid fa-check"></i>
-        </div>`;
+        </div>
+    `;
 
     lineaProductoComprado.innerHTML = contenido;
-    const carritoCompras = document.getElementById("ventana_carrito-compras");
-    carritoCompras.appendChild(lineaProductoComprado);
+    carritoContenedor.appendChild(lineaProductoComprado);
+    
+    
+    
 }
-
-
-
-
-
 
 const quitarProducto =(id) =>{
     return fetch(`http://localhost:2000/productos/${id}`, {
@@ -71,13 +72,13 @@ const quitarProducto =(id) =>{
     }).catch(error => console.log(error))
 }
 
-const carritoProducto = document.getElementById("ventana_carrito");
 
+const carritoProducto = document.getElementById("ventana_carrito");
 const listaDeArticulos = () => {
     fetch("http://localhost:2000/productos")
         .then(respuesta => respuesta.json())
-        .then(data => data.forEach(({nombre_producto, precio_producto, id, imagen_producto}) =>  {
-            const nuevoProductoAgregado = productoNuevo(nombre_producto, precio_producto, id, imagen_producto)
+        .then(data => data.forEach(({nombre_producto, precio_producto, id,cantidad}) =>  {
+            const nuevoProductoAgregado = productoNuevo(nombre_producto, precio_producto, id,cantidad)
             carritoProducto.appendChild(nuevoProductoAgregado);
         }))
         .catch(error => console.log("Opss" + error));
@@ -85,13 +86,13 @@ const listaDeArticulos = () => {
 
 listaDeArticulos()
 
-const AgregarProductoCarrito = (nombre_producto, precio_producto, id, imagen_producto) => {
+const AgregarProductoCarrito = (nombre_producto, precio_producto, cantidad, imagen_producto) => {
     return fetch("http://localhost:2000/productos", {
         method: "POST",
         headers: {
             "content-type": "application/json"
         },
-        body: JSON.stringify({nombre_producto, precio_producto, id:uuid.v4(),imagen_producto})
+        body: JSON.stringify({nombre_producto, precio_producto, id:uuid.v4(),imagen_producto, cantidad})
     })
         
 }

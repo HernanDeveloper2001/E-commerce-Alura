@@ -1,9 +1,25 @@
 {
   "productos": [
     {
+      "nombre_producto": "tarro de galletas",
+      "precio_producto": "$ 100,00",
+      "id": "af0f120e-988a-42e0-85cf-49e7a82d5942",
+      "imagen_producto": "http://127.0.0.1:5500/img/ventas/start-wars/galletas.jpg",
+      "cantidad": 1
+    },
+    {
       "nombre_producto": "cartuchera",
       "precio_producto": "$ 20,00",
-      "id": "a918e00b-caa5-453c-b4b7-25bbad2d985a"
+      "id": "203211f8-9678-41bd-bcba-9b9e98f6f27c",
+      "imagen_producto": "http://127.0.0.1:5500/img/ventas/start-wars/cartuchera.jpg",
+      "cantidad": 1
+    },
+    {
+      "nombre_producto": "personajes",
+      "precio_producto": "$ 1000,00",
+      "id": "2d06680f-9e86-4535-be9b-ba0cae6d37d6",
+      "imagen_producto": "http://127.0.0.1:5500/img/ventas/start-wars/personajes.jpg",
+      "cantidad": 1
     }
   ]
 }

@@ -24,13 +24,13 @@
 }
 
 .carrito-articulos {
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid #cccccc;
     padding: 1rem;
     width: 80%;
+    margin: 1rem auto;
 }
 
 .carrito-descripcion {
