@@ -1,4 +1,4 @@
-const productoNuevo = (nombre_producto, precio_producto, id, cantidad, imagen_producto) => {
+const productoNuevo = (nombre_producto, precio_producto, id, cantidad) => {
     //seccion de productos agregados al carrito
     const linea = document.createElement("section");
     const contenido = `
@@ -18,7 +18,7 @@ const productoNuevo = (nombre_producto, precio_producto, id, cantidad, imagen_pr
                 </article>`
 
     linea.innerHTML = contenido
-
+    
     //Boton quitar producto del carrito
     const botonQuitar = linea.querySelector(".carrito-boton-quitar");
     botonQuitar.addEventListener("click", () => {
@@ -27,13 +27,12 @@ const productoNuevo = (nombre_producto, precio_producto, id, cantidad, imagen_pr
             console.log(respuesta)}).catch(error => alert("Ocurrio un error"+ error))
         })
 
-    //boton comprar producto del carrito 
     const botonComprar = linea.querySelector(".carrito-boton-comprar");
-    botonComprar.addEventListener("click", () => {
-        const nombre_producto = linea.querySelector(".nombre_articulo").textContent;
-        const imagen_producto = sessionStorage.getItem("imagen_articulo");
+    botonComprar.addEventListener("click", (e) => {
+        const nombre_producto = localStorage.getItem("nombre_articulo");
+        const imagen_producto = localStorage.getItem("imagen_articulo")
+        console.log(imagen_producto)
         productoComprado(nombre_producto, imagen_producto)
-
     })
 
     return linea
@@ -64,25 +63,28 @@ const productoComprado = (nombre_producto, imagen_producto) => {
     
 }
 
+
+
+
 const quitarProducto =(id) =>{
     return fetch(`http://localhost:2000/productos/${id}`, {
         method: "DELETE",
     }).catch(error => console.log(error))
 }
 
-
 const carritoProducto = document.getElementById("ventana_carrito");
 const listaDeArticulos = () => {
     fetch("http://localhost:2000/productos")
         .then(respuesta => respuesta.json())
-        .then(data => data.forEach(({nombre_producto, precio_producto, id,cantidad}) =>  {
-            const nuevoProductoAgregado = productoNuevo(nombre_producto, precio_producto, id,cantidad)
+        .then(data => data.forEach(({nombre_producto, precio_producto, id,cantidad, imagen_producto}) =>  {
+            const nuevoProductoAgregado = productoNuevo(nombre_producto, precio_producto, id,cantidad, imagen_producto)
             carritoProducto.appendChild(nuevoProductoAgregado);
         }))
         .catch(error => console.log("Opss" + error));
 }
 
 listaDeArticulos()
+
 
 const AgregarProductoCarrito = (nombre_producto, precio_producto,cantidad, imagen_producto) => {
     return fetch("http://localhost:2000/productos", {

@@ -1,11 +1,18 @@
 {
   "productos": [
     {
-      "nombre_producto": "tarro de galletas",
-      "precio_producto": "$ 100,00",
-      "id": "848dab74-3004-4e03-8017-35e740a8de1e",
+      "nombre_producto": "cartuchera",
+      "precio_producto": "$ 20,00",
+      "id": "ceb02e1c-7cd8-4f65-be69-9a93ba0f877a",
       "cantidad": 1,
-      "imagen_producto": "http://127.0.0.1:5500/img/ventas/start-wars/galletas.jpg"
+      "imagen_producto": "http://127.0.0.1:5500/img/ventas/start-wars/cartuchera.jpg"
+    },
+    {
+      "nombre_producto": "maletin",
+      "precio_producto": "$ 2000,00",
+      "id": "4eb6b87f-2e82-40e0-9dc7-5d9211b6c6ab",
+      "cantidad": 1,
+      "imagen_producto": "http://127.0.0.1:5500/img/ventas/start-wars/maletin.jpeg"
     }
   ]
 }
