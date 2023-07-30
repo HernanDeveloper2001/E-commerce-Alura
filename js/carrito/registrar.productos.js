@@ -1,4 +1,4 @@
-const productoNuevo = (nombre_producto, precio_producto, id, cantidad) => {
+const productoNuevo = (nombre_producto, precio_producto, id, cantidad, imagen_producto) => {
     //seccion de productos agregados al carrito
     const linea = document.createElement("section");
     const contenido = `
@@ -9,7 +9,7 @@ const productoNuevo = (nombre_producto, precio_producto, id, cantidad) => {
                     </div>
                     <div class="carrito-cantidad">
                         <p>Cantidad</p>
-                        <span class="cantidad">${cantidad}</span>
+                        <span class="cantidad_articulo">${cantidad}</span>
                     </div>
                     <div class="carrito-botones">
                         <button class="carrito-boton-comprar">Comprar</button>
@@ -33,13 +33,11 @@ const productoNuevo = (nombre_producto, precio_producto, id, cantidad) => {
         const nombre_producto = linea.querySelector(".nombre_articulo").textContent;
         const imagen_producto = sessionStorage.getItem("imagen_articulo");
         productoComprado(nombre_producto, imagen_producto)
-        sessionStorage.removeItem(id)
 
     })
 
     return linea
 }
-
 
 
 const productoComprado = (nombre_producto, imagen_producto) => {
@@ -86,13 +84,13 @@ const listaDeArticulos = () => {
 
 listaDeArticulos()
 
-const AgregarProductoCarrito = (nombre_producto, precio_producto, cantidad, imagen_producto) => {
+const AgregarProductoCarrito = (nombre_producto, precio_producto,cantidad, imagen_producto) => {
     return fetch("http://localhost:2000/productos", {
         method: "POST",
         headers: {
             "content-type": "application/json"
         },
-        body: JSON.stringify({nombre_producto, precio_producto, id:uuid.v4(),imagen_producto, cantidad})
+        body: JSON.stringify({nombre_producto, precio_producto, id:uuid.v4(),cantidad,imagen_producto,})
     })
         
 }
